@@ -45,7 +45,7 @@ Citizen.CreateThread(function()
     local blip = AddBlipForEntity(sPed)
         SetBlipSprite(blip, v.blip.sprite)
         SetBlipScale(blip, v.blip.scale)
-    SetBlipColour(blip, v.blip.color)
+        SetBlipColour(blip, v.blip.color)
         SetBlipAsShortRange(blip, true)
         BeginTextCommandSetBlipName('STRING')
         AddTextComponentSubstringPlayerName(v.blip.label)
@@ -57,16 +57,16 @@ Citizen.CreateThread(function()
       Wait(10)
       local distance = #(GetEntityCoords(PlayerPedId()) - vector3(v.coords.x + 1, v.coords.y + 1, v.coords.z))
       if distance < v.dist then
-        noti(v.label, vector3(v.coords.x, v.coords.y, v.coords.z + 2))
+        FloatingNotification(v.label, vector3(v.coords.x, v.coords.y, v.coords.z + 2))
       end
     end
   end
 end, false)
 
-noti = function(msg, coords)
-    AddTextEntry('noti', msg)
+FloatingNotification = function(msg, coords)
+    AddTextEntry('FloatingNotification', msg)
     SetFloatingHelpTextWorldPosition(1, coords)
     SetFloatingHelpTextStyle(1, 1, 2, -1, 3, 0)
-    BeginTextCommandDisplayHelp('noti')
+    BeginTextCommandDisplayHelp('FloatingNotification')
     EndTextCommandDisplayHelp(2, false, false, -1)
 end
