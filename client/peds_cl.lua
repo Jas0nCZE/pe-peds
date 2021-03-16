@@ -17,6 +17,26 @@ local peds = {
       label = "",
       color = 8,
     }
+  },
+  
+    {
+    label = "",
+    model = "",
+    anim = "",
+    anim2 = "",
+    dist = 2,
+    coords = {
+      x = 1, 
+      y = 1, 
+      z = 1, 
+      h = 1
+    },
+    blip = {
+      sprite = 1,
+      scale = 1.0,
+      label = "",
+      color = 8,
+    }
   }
 }
 
