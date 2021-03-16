@@ -1,20 +1,20 @@
 local peds = {
   {
-    label = "",
-    model = "",
-    anim = "",
-    anim2 = "",
-    dist = 2,
-    coords = {
+    label = "Text of notification",
+    model = "ped_model",
+    anim = "Animation1",
+    anim2 = "Animation2",
+    dist = 2, -- Distance
+    coords = { -- Coords of ped
       x = 1, 
       y = 1, 
       z = 1, 
       h = 1
     },
-    blip = {
+    blip = { -- Blip of ped
       sprite = 1,
       scale = 1.0,
-      label = "",
+      label = "Text of blip",
       color = 8,
     }
   },
